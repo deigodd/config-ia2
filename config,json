@@ -4,7 +4,7 @@
       "name": "LR_basic",
       "C": 1,
       "learning_rate": "constant",
-      "eta0": 0.01,
+      "eta0": 0.12,
       "max_iter": 1000,
       "tol": 0.0001,
       "penalty": "l2"
@@ -13,7 +13,7 @@
       "name": "LR_high_regularization",
       "C": 0.1,
       "learning_rate": "constant",
-      "eta0": 0.01,
+      "eta0": 0.12,
       "max_iter": 1000,
       "tol": 0.0001,
       "penalty": "l2"
@@ -22,7 +22,7 @@
       "name": "LR_l1_penalty",
       "C": 1,
       "learning_rate": "constant",
-      "eta0": 0.01,
+      "eta0": 0.12,
       "max_iter": 1000,
       "tol": 0.0001,
       "penalty": "l1"
