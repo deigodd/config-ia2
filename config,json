@@ -1,56 +1,59 @@
 {
   "logistic_regression": [
     {
-      "name": "LR_basic",
+      "name": "LR_small_batch",
       "C": 1,
       "learning_rate": "constant",
-      "eta0": 0.12,
+      "eta0": 0.05,
       "max_iter": 1000,
       "tol": 0.0001,
-      "penalty": "l2"
+      "penalty": "l2",
+      "batch_size": 256
     },
     {
-      "name": "LR_high_regularization",
-      "C": 0.1,
-      "learning_rate": "constant",
-      "eta0": 0.12,
+      "name": "LR_medium_batch",
+      "C": 0.5,
+      "learning_rate": "adaptive",
+      "eta0": 0.1,
       "max_iter": 1000,
       "tol": 0.0001,
-      "penalty": "l2"
+      "penalty": "l2",
+      "batch_size": 512
     },
     {
-      "name": "LR_l1_penalty",
+      "name": "LR_large_batch",
       "C": 1,
       "learning_rate": "constant",
-      "eta0": 0.12,
+      "eta0": 0.2,
       "max_iter": 1000,
       "tol": 0.0001,
-      "penalty": "l1"
+      "penalty": "l1",
+      "batch_size": 1024
     }
   ],
   "svm": [
     {
-      "name": "SVM_linear",
-      "C": 1,
+      "name": "SVM_linear_smallC",
+      "C": 0.5,
       "kernel": "linear",
       "gamma": "scale",
       "max_iter": 1000,
       "tol": 0.001
     },
     {
-      "name": "SVM_rbf",
+      "name": "SVM_rbf_mediumC",
       "C": 1,
       "kernel": "rbf",
-      "gamma": "scale",
-      "max_iter": 1000,
+      "gamma": 0.1,
+      "max_iter": 2000,
       "tol": 0.001
     },
     {
-      "name": "SVM_high_C",
+      "name": "SVM_rbf_highC",
       "C": 10,
       "kernel": "rbf",
-      "gamma": "scale",
-      "max_iter": 1000,
+      "gamma": 0.01,
+      "max_iter": 3000,
       "tol": 0.001
     }
   ]
